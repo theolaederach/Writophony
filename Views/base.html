@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writophony – Topbar</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
 </head>
 <body>
-    <h1>Welcome to Writophony</h1>
+
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="logo.png" alt="Logo Writophony">
+      <span>Writophony</span>
+    </a>
+
+    <nav class="actions" aria-label="Navigation principale">
+      <button class="btn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <path d="M3 6h18"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Boutique</span>
+      </button>
+
+      <button class="btn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Profil</span>
+      </button>
+
+      <button class="avatar" type="button" aria-label="Compte utilisateur">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
 </body>
 </html>

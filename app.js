@@ -54,6 +54,11 @@ app.get('/logout', (req, res) => {
 app.use('/profiles', require('./Routes/profils'));
 app.use('/games', require('./Routes/games'));
 
+
+//
+app.use(express.static(__dirname + '/public'));
+
+
 // Démarrage du serveur
 app.listen(port, () => {
   console.log(`[WritoPhony] Server is running on http://localhost:${port}`);
