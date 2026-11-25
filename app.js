@@ -7,6 +7,8 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const isLoggedIn = require('./Functions/isLoggedIn');
 
+const { db } = require("./db/database.js");
+
 const app = express();
 const port = 3000;
 
@@ -17,7 +19,7 @@ nunjucks.configure('Views', {
     watch: true
 })
 
-// Route principale 
+// Route principale
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/Views/base.html');
 });
@@ -53,6 +55,11 @@ app.get('/logout', (req, res) => {
 // Routes pour les profils et les parties
 app.use('/profiles', require('./Routes/profils'));
 app.use('/games', require('./Routes/games'));
+
+
+//
+app.use(express.static(__dirname + '/public'));
+
 
 // Démarrage du serveur
 app.listen(port, () => {

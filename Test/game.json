@@ -1,0 +1,48 @@
+[
+  {
+    "game_id": 1,
+    "player_count": 4,
+    "rounds_count": 4,
+    "current_round": 4,
+    "time_per_round": 10,
+    "time_remaining": 1,
+    "rounds": {
+      "1": {
+        "player1": {
+          "sentence": "Il était une fois, un petit village niché",
+          "story": 1
+        },
+        "player2": {
+          "sentence": "Je vais vous raconter mon histoire,",
+          "story": 2
+        },
+        "player3": {
+          "sentence": "D'accord, ça à l'air un peu bizarre, mais",
+          "story": 3
+        },
+        "player4": {
+          "sentence": "Okay Okay, voici le début, ",
+          "story": 4
+        }
+      },
+      "2": {
+        "player1": {
+          "sentence": "je sais que ça fait un moment que je n'ai",
+          "story": 4
+        },
+        "player2": {
+          "sentence": "dans la forêt, il y avait un petit garçon qui rêvait de devenir un grand aventurier.",
+          "story": 1
+        },
+        "player3": {
+          "sentence": "une histoire assez spéciale avec des personnages étranges et des événements mystérieux.",
+          "story": 2
+        },
+        "player4": {
+          "sentence": "j'aime beaucoup les plantes et les animaux, et j'ai toujours rêvé de vivre dans un endroit où la nature est préservée.",
+          "story": 3
+        }
+      }
+    }
+  }
+]
