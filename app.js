@@ -7,6 +7,8 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const isLoggedIn = require('./Functions/isLoggedIn');
 
+const { db } = require("./db/database.js");
+
 const app = express();
 const port = 3000;
 
@@ -17,7 +19,7 @@ nunjucks.configure('Views', {
     watch: true
 })
 
-// Route principale 
+// Route principale
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/Views/base.html');
 });
