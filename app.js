@@ -7,7 +7,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const isLoggedIn = require('./Functions/isLoggedIn');
 
-const { db } = require("./db/database.js");
+const { players } = require("./db/users.js");
 
 const app = express();
 const port = 3000;
