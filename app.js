@@ -21,7 +21,7 @@ nunjucks.configure('Views', {
 
 // Route principale
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Views/base.html');
+    res.sendFile(__dirname + '/Views/acceuil.html');
 });
 
 // Route pour le login (vérifie si l'utilisateur est déjà connecté)
