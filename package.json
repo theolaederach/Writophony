@@ -18,6 +18,8 @@
     "dev": "nodemon app.js"
   },
   "dependencies": {
+    "bootstrap": "^5.3.9",
+    "better-sqlite3": "^13.2.0",
     "express": "^5.3.0",
     "fs": "^0.0.1-security",
     "nodemon": "^3.1.14",

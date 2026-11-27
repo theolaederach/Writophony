@@ -9,6 +9,8 @@ const http = require('http');
 const { Server } = require('socket.io');
 const isLoggedIn = require('./Functions/isLoggedIn');
 
+const { db } = require("./db/database.js");
+
 // Création du server avec express et socket.io
 const app = express();
 const server = http.createServer(app);
@@ -22,7 +24,7 @@ nunjucks.configure('Views', {
     watch: true
 })
 
-// Route principale 
+// Route principale
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/Views/base.html');
 });
@@ -58,6 +60,11 @@ app.get('/logout', (req, res) => {
 // Routes pour les profils et les parties
 app.use('/profiles', require('./Routes/profils'));
 app.use('/games', require('./Routes/games'));
+
+
+//
+app.use(express.static(__dirname + '/public'));
+
 
 io.on('connection', (socket) => {
     console.log('A user connected');
