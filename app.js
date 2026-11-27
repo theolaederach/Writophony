@@ -5,9 +5,14 @@
 
 const express = require('express');
 const nunjucks = require('nunjucks');
+const http = require('http');
+const { Server } = require('socket.io');
 const isLoggedIn = require('./Functions/isLoggedIn');
 
+// Création du server avec express et socket.io
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
 const port = 3000;
 
 // Configuration de Nunjucks (permet de pouvoir utiliser des templates HTML)
@@ -54,7 +59,11 @@ app.get('/logout', (req, res) => {
 app.use('/profiles', require('./Routes/profils'));
 app.use('/games', require('./Routes/games'));
 
+io.on('connection', (socket) => {
+    console.log('A user connected');
+});
+
 // Démarrage du serveur
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`[WritoPhony] Server is running on http://localhost:${port}`);
 });

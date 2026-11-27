@@ -21,6 +21,7 @@
     "express": "^5.3.0",
     "fs": "^0.0.1-security",
     "nodemon": "^3.1.14",
-    "nunjucks": "^3.2.4"
+    "nunjucks": "^3.2.4",
+    "socket.io": "^4.8.4"
   }
 }

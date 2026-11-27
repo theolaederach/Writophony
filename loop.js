@@ -51,4 +51,4 @@ const gameLoop = async () => {
     }
 }
 
-gameLoop();
+module.exports = gameLoop;
