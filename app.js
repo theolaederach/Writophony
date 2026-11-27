@@ -9,9 +9,6 @@ const http = require('http');
 const { Server } = require('socket.io');
 const isLoggedIn = require('./Functions/isLoggedIn');
 
-const { db } = require("./db/database.js");
-
-// Création du server avec express et socket.io
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
