@@ -32,6 +32,39 @@ const players = {
       throw err;
     }
   },
+  /**
+   * check the login of a player.
+   *
+   * Args :
+   *     name (string): name of the player.
+   *     passwordHash (string): hashed password.
+   *
+   * Return :
+   *     if the player is in the db and the login are correct (boolean)
+   *
+   * @param {string} name
+   * @param {string} passwordHash
+   * @returns {boolean}
+   */
+  checkLogin: (name, passwordHash) => {
+    try {
+      const result = db
+        .prepare("SELECT * FROM players WHERE name LIKE ? AND password_hash LIKE ?;")
+        .get(name, passwordHash);
+      if (result == undefined) {
+        // check if the array result is empty
+        return false;
+      } else {
+        return true;
+      }
+    }
+    catch (err) {
+      // unexpected error: log it, then let the caller handle it
+      console.error("createPlayer failed:", err);
+      throw err;
+    }
+
+  },
 };
 
 module.exports = { players };
